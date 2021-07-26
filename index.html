@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="funcoes.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="nav_tabs">
+        <ul>
+            <li>
+                <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
+                <label for="tab1" class="tab_label">CLIENTES</label>
+                <div class="tab-content">
+                     <article>
+                        <form>
+                            <table>
+                                
+                                <tr>
+                                    <td class="alinharRotulos">Nome do Cliente:</td>
+                                    <td><input id="txtnomeCliente" type="text" placeholder="Renan Vanbasten"></td>
+                                </tr>
+                                <!--Código do produto-->
+                                <tr>
+                                    <td class="alinharRotulos">E-mail do Cliente:</td>
+                                    <td><input id="txtemailCliente" type="text" placeholder="renan@gmail.com"></td>
+                                </tr>
+                                <!--Quantidade do produto-->
+                                <tr>
+                                    <td class="alinharRotulos">Endereço do Cliente:</td>
+                                    <td>
+                                        <input id="endCliente" type="text" placeholder="Avenida Domingos Ferreira">
+                                    </td>
+                                </tr>
+                                <!--Botoes-->
+                                <tr>
+                                    <td colspan="2" align="center">
+                                        <input type="button" value="Cadastrar" class="alinhaBtns" onclick="validarCliente('txtnomeCliente', 'txtemailCliente', 'endCliente')">
+                                        <input type="button" value="Ver Clientes" class="alinhaBtns" onclick="window.open('verClientes.html','_blank')">
+                                        <input type="reset" value="Limpar" class="alinhaBtns">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </article>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tab" id="tab2">
+                <label for="tab2" class="tab_label">PRODUTOS</label>
+                <div class="tab-content">
+                    
+                    <article>
+                        <form>
+                            <table>
+                                
+                                <tr>
+                                    <td class="alinharRotulos">Nome do produto:</td>
+                                    <td><input id="txtNomeProduto" type="text"></td>
+                                </tr>
+                                <!--Código do produto-->
+                                <tr>
+                                    <td class="alinharRotulos">Código do produto:</td>
+                                    <td><input id="txtCodProduto" type="text"></td>
+                                </tr>
+                                <!--Quantidade do produto-->
+                                <tr>
+                                    <td class="alinharRotulos">Quantidade do produto:</td>
+                                    <td>
+                                        <select id="qtidadeProduto">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <!--Botoes-->
+                                <tr>
+                                    <td colspan="2" align="center">
+                                        <input type="button" value="Cadastrar" class="alinhaBtns" onclick="validarProduto('txtNomeProduto','txtCodProduto','qtidadeProduto')">
+                                        <input type="button" value="Ver estoque" class="alinhaBtns" onclick="window.open('verEstoque.html','_blank')">
+                                        <input type="reset" value="Limpar" class="alinhaBtns">
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </article>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>
